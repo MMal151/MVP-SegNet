@@ -1,0 +1,12 @@
+connected_components_3d==3.16.0
+keras_unet_collection==0.1.13
+matplotlib==3.4.3
+nibabel==5.2.1
+numpy==1.24.3
+pandas==2.2.2
+plotly==5.17.0
+PyYAML==6.0.2
+scikit_learn==1.5.2
+scipy==1.13.1
+SimpleITK==2.4.0
+tensorflow==2.8.4

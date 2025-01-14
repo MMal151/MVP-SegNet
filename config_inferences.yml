@@ -1,0 +1,20 @@
+# If false, CPU will be utilised instead of GPU.
+alw_parallel_processing: True
+gpu: "0,1" # Comma-seperated list of GPUs that can be used.
+data_path: "test_local.csv" #Path of CSV file containing test cases (already divided into patches).
+model_path: "impress_37.h5"
+threshold: 0.5 # Probability threshold
+save_inference: True # Whether to save the generated mask.
+strategy: "vote" # patch merging strategy. Possible Options: "max", "vote"
+apply_cca: False # Apply connected component analysis
+
+##---Custom Objects required to load model---##
+##---Ensure that they are the same as the training configurations---##
+input_shape: "(128, 128, 128)"
+normalize_img: True
+normalize:
+  technique: 'greyscale'
+perf_metrics: "recall, prec, mean_iou, dice_coef"
+loss: "focal_tversky"
+activation: "relu"
+

@@ -1,0 +1,23 @@
+output_classes: 1
+dropout: 0.2
+min_filter: 8
+conv_mode: "3D"
+# -- V-Net Specific Configurations --#
+mvp:
+  encoder_blocks: "1,2,3,3"
+  decoder_blocks: "3,3,2,1"
+  use_transpose: True
+  add_both_res_con: True # If true, instead of both res connection functions being applied in succession. They will be
+  # applied independently and added in the end.
+# Use squeeze and excitation block based residual connections, will be used for up-scaling.
+  squeeze_excitation:
+    use_sne: True
+    ratio: 2
+    use_relu: True
+    use_res_con: True
+    mode: 'ed'
+  # Use dilated residual connections
+  dilated_res_con:
+    use_dltd_res_con: True
+    dilation_rates: "1,2,3,4" # Must be 4, to match the number of up-sampling blocks.
+

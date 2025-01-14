@@ -1,0 +1,7 @@
+README.md
+setup.py
+src/mvp_segnet.egg-info/PKG-INFO
+src/mvp_segnet.egg-info/SOURCES.txt
+src/mvp_segnet.egg-info/dependency_links.txt
+src/mvp_segnet.egg-info/requires.txt
+src/mvp_segnet.egg-info/top_level.txt

@@ -1,0 +1,55 @@
+#Possible Values: gen_splits (Generate 3D train/test/validation split. Configurations under the tag 'split' will be used.),
+# gen_images (Generate 2D train/test/validation split. Configurations under the tag '2D' will be used.)
+mode: "gen_splits"
+split:
+  # Comma-separated list of input of paths.
+  #input_paths: "/home/mmal151/resmed202200021-IMPRESS_data/Mishaim/ATLAS_2_Cleaned/"
+  #input_paths: "/home/mmal151/Desktop/Dummy_Data/T1_1/,/home/mmal151/Desktop/Dummy_Data/T1_2/"
+  input_paths: ""
+  # File extension of input scan.
+  scan_ext: "_T1_BC_bet.nii.gz"
+  #scan_ext: "ncct_RS.nii.gz"
+  # File extension of lesion mask.
+  msk_ext: "LESION.nii.gz"
+  #msk_ext: "msk_RS.nii.gz"
+  type: "balanced" #Possible options: Default (Random Split of data), balanced (Generate splits with equal representation of each voxel split.)
+  train_ratio: 0.8
+  test_ratio: 0.2
+  valid_ratio: 0.2 # Taken from the training set. Should be < train_ratio / 2.
+  seed: 0130
+  do_patching: True
+  do_augmentation: False
+  rmv_pre_aug: False # Remove augmented files. Any file ending with _cm from the input folder(s) will be deleted.
+  # -- Patching Configurations -- #
+  patch:
+    shape: "(128, 128, 128)"
+    random: False # Generate random patches or ordered patches.
+    stride:
+      train: 4
+      valid: 8
+      test: 8
+    alw_empty_patches: False # Allow empty patches; only used for training set.
+# -- Only used if type = balanced -- #
+  balanced:
+    bin_range: "0, 100, 1000, 5000, 10000, 100000" #List of ranges for the voxels to be divided into. If empty, bins will be generated.
+    save_ordered_set: True
+    read_from_file: True # If ordered_set.csv is already generated, bins could be read from the file rather than re-generating the bins.
+    visualise_dataset: True
+# -- Training set will be augmented using CraveMix -- #
+  augmentation:
+    factor: 0.3
+
+2D:
+  input_paths: ""
+  scan_ext: "ncct_RS.nii.gz"
+  msk_ext: "msk_RS.nii.gz"
+  train_ratio: 0.8
+  test_ratio: 0.2
+  valid_ratio: 0.2 # Taken from the training set. Should be < train_ratio / 2.
+  rmv_pre_aug: True # Remove augmented files. Any file ending with _cm from the input folder(s) will be deleted.
+  seed: 0130
+  #TO-DO: Add configuration to extract images of each view or just one view.
+  num_images: -1 # If -1, number of images = number of slices in the view.
+  alw_empty_images: False # Allow empty images; Only used for training.
+
+

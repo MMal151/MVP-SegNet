@@ -1,0 +1,43 @@
+Metadata-Version: 2.2
+Name: mvp-segnet
+Version: 0.0.0
+Summary: A deep learning model for automated stroke lesion segmentation.
+Home-page: https://github.com/MMal151/MVP-SegNet.git
+Author: Mishaim Malik
+Description-Content-Type: text/markdown
+Requires-Dist: connected_components_3d==3.16.0
+Requires-Dist: keras_unet_collection==0.1.13
+Requires-Dist: matplotlib==3.4.3
+Requires-Dist: nibabel==5.2.1
+Requires-Dist: numpy==1.24.3
+Requires-Dist: pandas==2.2.2
+Requires-Dist: plotly==5.17.0
+Requires-Dist: PyYAML==6.0.2
+Requires-Dist: scikit_learn==1.5.2
+Requires-Dist: scipy==1.13.1
+Requires-Dist: SimpleITK==2.4.0
+Requires-Dist: tensorflow==2.8.4
+Dynamic: author
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
+
+# MVP-SegNet
+
+[TODO: Add project descirption]
+This repository contains
+
+## Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/MMal151/MVP-SegNet.git
+   
+[TODO: Add requirements file]
+2. **Install dependencies**
+   ```bash
+    pip install -r requirements.txt
+
+[TODO: Add project details]
