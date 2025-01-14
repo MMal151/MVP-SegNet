@@ -39,7 +39,7 @@ pip install mvp-segnet
 ```
 ### From source code
 #### Downloading source code
-Clone the SPARC-SPy repository from github, e.g.:
+Clone the MVP-SegNet repository from github, e.g.:
 ```
 git clone https://github.com/MMal151/MVP-SegNet.git 
 ```
@@ -55,4 +55,10 @@ Please check existing issues before submitting a new one.
 
 ### Project structure
 * `/src/` - Directory of MVP-SegNet python module.
-* `/tutorials/` - Directory of tutorials showcasing SPARC-SPy python module in action.
+* `/Analysis/` - Directory containing scripts for statistical analysis.
+* `config_train.yml` - Sample configuration file for training a new model.
+* `config_inference.yml` - Sample configuration file for generating an inference (generate segmentations from test set).
+* `config_dataset.yml` - Sample configuration file for pre-processing dataset.
+
+
+
