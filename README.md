@@ -4,12 +4,7 @@
 * [Introduction](#introduction)
 * [Setting up](#setting-up-SPARC-SPy)
 * [Reporting issues](#reporting-issues)
-* [Contributing](#contributing)
 * [Cite us](#cite-us)
-* [FAIR practices](#fair-practices)
-* [License](#license)
-* [Team](#team)
-* [Acknowledgements](#acknowledgements)
 
 ## Introduction
 This project introduces MVP-SegNet, a deep learning model designed for accurate segmentation of stroke lesions in T1-weighted MRI scans. Stroke lesion segmentation is crucial for automating prognosis and recovery predictions, enabling more effective clinical interventions. 
@@ -60,5 +55,10 @@ Please check existing issues before submitting a new one.
 * `config_inference.yml` - Sample configuration file for generating an inference (generate segmentations from test set).
 * `config_dataset.yml` - Sample configuration file for pre-processing dataset.
 
+
+## Cite us
+If you use sparc-flow to make new discoveries or use the source code, please cite us as follows:
+```
+to-be-added 
 
 
