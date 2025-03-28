@@ -57,7 +57,7 @@ Please check existing issues before submitting a new one.
 
 
 ## Cite us
-If you use sparc-flow to make new discoveries or use the source code, please cite us as follows:
+If you use MVP-SegNet to make new discoveries or use the source code, please cite us as follows:
 ```
 to-be-added 
 
