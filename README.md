@@ -26,12 +26,7 @@ While recognizing certain limitations, this study demonstrates the potential of 
 - [Git](https://git-scm.com/)
 - Python versions:
    - 3.9
-###  Installing via PyPI
 
-Here is the [link](https://pypi.org/project//) to our project on PyPI 
-```
-pip install mvp-segnet
-```
 ### From source code
 #### Downloading source code
 Clone the MVP-SegNet repository from github, e.g.:
